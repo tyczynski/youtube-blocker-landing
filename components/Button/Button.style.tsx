@@ -46,7 +46,6 @@ export const Component = styled.button<ButtonComponentProps>`
   font-size: 1.4rem;
   line-height: 1.6rem;
   cursor: pointer;
-  contain: content;
   text-decoration: none;
   transition: 0.3s cubic-bezier(0.22, 0.61, 0.36, 1);
   transition-property: background-color, color;
