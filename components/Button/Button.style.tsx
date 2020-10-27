@@ -42,7 +42,7 @@ export const Component = styled.button<ButtonComponentProps>`
   outline: none;
   border: 1px solid;
   border-radius: 100rem;
-  padding: 1.35rem 2.45rem;
+  padding: 1.6rem 2.4rem;
   font-size: 1.4rem;
   line-height: 1.6rem;
   cursor: pointer;
