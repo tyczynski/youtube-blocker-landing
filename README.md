@@ -1,41 +1,44 @@
-# TypeScript Next.js example
+# Landing page of YouTube Blocker extension
 
-This is a really simple project that shows the usage of Next.js with TypeScript.
+## Getting Started
 
-## Deploy your own
-
-Deploy the example using [Vercel](https://vercel.com):
-
-[![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/import/project?template=https://github.com/vercel/next.js/tree/canary/examples/with-typescript)
-
-## How to use it?
-
-Execute [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) with [npm](https://docs.npmjs.com/cli/init) or [Yarn](https://yarnpkg.com/lang/en/docs/cli/create/) to bootstrap the example:
+Run the development server:
 
 ```bash
-npx create-next-app --example with-typescript with-typescript-app
-# or
-yarn create next-app --example with-typescript with-typescript-app
+$ npm run dev
 ```
 
-Deploy it to the cloud with [Vercel](https://vercel.com/import?filter=next.js&utm_source=github&utm_medium=readme&utm_campaign=next-example) ([Documentation](https://nextjs.org/docs/deployment)).
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-## Notes
+## Scripts
 
-This example shows how to integrate the TypeScript type system into Next.js. Since TypeScript is supported out of the box with Next.js, all we have to do is to install TypeScript.
+```bash
+# Run the development server
+$ npm run dev
 
+# Build the production version
+$ npm run build
+
+# Run the production version of the build
+$ npm run start
 ```
-npm install --save-dev typescript
-```
 
-To enable TypeScript's features, we install the type declarations for React and Node.
+## Semantic versioning
 
-```
-npm install --save-dev @types/react @types/react-dom @types/node
-```
+The project uses _semantic versioning_. For more informations see the [documentaction](https://semver.org/).
 
-When we run `next dev` the next time, Next.js will start looking for any `.ts` or `.tsx` files in our project and builds it. It even automatically creates a `tsconfig.json` file for our project with the recommended settings.
+### Conventional commits
 
-Next.js has built-in TypeScript declarations, so we'll get autocompletion for Next.js' modules straight away.
+Commit messages are written in the specification [conventional commits](https://www.conventionalcommits.org/en/v1.0.0/). Several types of commits are used in a project that as:
 
-A `type-check` script is also added to `package.json`, which runs TypeScript's `tsc` CLI in `noEmit` mode to run type-checking separately. You can then include this, for example, in your `test` scripts.
+- `feat` - a new feature
+- `fix` - a bug fix
+- `build` - changes that affect the build system or external dependencies
+- `ci` - changes to our CI configuration files and scripts
+- `style` - changes that do not affect the meaning of the code (white-space, formatting, missing semi-colons, etc)
+- `docs` - changes to the documentation
+- `refactor` - a code change that neither fixes a bug nor adds a feature
+- `test` - adding missing tests or correcting existing tests
+- `perf` - a code change that improves performance
+- `chore` - the rest of the changes that don't match, like changes in prettier or eslint config
+- `release` - merge request with new release
