@@ -1,9 +1,9 @@
-import { Container } from '@components/Container'
+import { ContainerSlim } from '@components/Container'
 import { Wrapper, Info } from './Footer.style'
 
 export const Footer = () => (
   <Wrapper>
-    <Container>
+    <ContainerSlim>
       <Info $size="small" $color="light">
         Crafted with ❤️ by{' '}
         <a
@@ -22,6 +22,6 @@ export const Footer = () => (
           Kyosk Studio
         </a>
       </Info>
-    </Container>
+    </ContainerSlim>
   </Wrapper>
 )
