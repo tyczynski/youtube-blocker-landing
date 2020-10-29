@@ -1,1 +1,5 @@
 export { DarkMode } from './DarkMode'
+export { Features } from './Features'
+export { Header } from './Header'
+export { Navbar } from './Navbar'
+export { Footer } from './Footer'
