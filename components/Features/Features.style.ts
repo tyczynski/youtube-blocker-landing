@@ -3,10 +3,10 @@ import { ContainerSlim } from '@components/Container'
 import { H1 } from '@components/headings'
 
 export const Wrapper = styled(ContainerSlim)`
-  margin: 0 0 8rem;
+  margin-bottom: 8rem;
 
   @media screen and (min-width: 992px) {
-    margin: 0 0 12.8rem;
+    margin-bottom: 12.8rem;
   }
 `
 
