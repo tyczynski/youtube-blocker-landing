@@ -13,6 +13,7 @@ import {
   BrowsersText,
 } from './Header.style'
 import { windowLoad } from 'utils/events'
+import { getImageSets } from 'utils/getImageSets'
 
 export const Header: React.FC = () => {
   const [initialized, setInitialized] = useState(false)
@@ -60,63 +61,13 @@ export const Header: React.FC = () => {
         <ImageSet
           src="/images/intro-02.png"
           loading="lazy"
-          sets={[
-            {
-              type: 'image/webp',
-              rules: {
-                '280w': {
-                  opt: {
-                    o: 'webp',
-                    rs: {
-                      s: '480x',
-                    },
-                  },
-                },
-              },
-            },
-            {
-              rules: {
-                '280w': {
-                  opt: {
-                    rs: {
-                      s: '480x',
-                    },
-                  },
-                },
-              },
-            },
-          ]}
+          sets={getImageSets(480)}
         />
 
         <ImageSet
           src="/images/intro-01.png"
           loading="lazy"
-          sets={[
-            {
-              type: 'image/webp',
-              rules: {
-                '280w': {
-                  opt: {
-                    o: 'webp',
-                    rs: {
-                      s: '380x',
-                    },
-                  },
-                },
-              },
-            },
-            {
-              rules: {
-                '280w': {
-                  opt: {
-                    rs: {
-                      s: '380x',
-                    },
-                  },
-                },
-              },
-            },
-          ]}
+          sets={getImageSets(380)}
         />
       </Images>
     </Wrapper>
