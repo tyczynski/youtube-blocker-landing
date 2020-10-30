@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react'
 import Image from 'next/image'
 import cx from 'classnames'
 import { Button } from '@components/ui/Button'
+import { windowLoad } from '@lib/events'
 import { Browser } from './Browser'
 import { Title } from './Title'
 import {
@@ -12,7 +13,6 @@ import {
   BrowsersWrapper,
   BrowsersText,
 } from './Header.style'
-import { windowLoad } from 'utils/events'
 
 export const Header: React.FC = () => {
   const [initialized, setInitialized] = useState(false)

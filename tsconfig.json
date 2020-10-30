@@ -24,7 +24,7 @@
       "@components/*": ["components/*"],
       "@style/*": ["style/*"],
       "@test/*": ["test/*"],
-      "@utils/*": ["utils/*"]
+      "@lib/*": ["lib/*"]
     }
   },
   "exclude": ["node_modules"],
