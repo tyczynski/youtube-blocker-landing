@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { Text } from '@components/Text'
-import { Container } from '@components/Container'
+import { Text } from '@components/ui/Text'
+import { Container } from '@components/skeleton/Container'
 
 export const Content = styled.header`
   margin: 0 0 4.8rem;

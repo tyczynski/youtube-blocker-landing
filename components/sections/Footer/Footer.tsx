@@ -1,4 +1,4 @@
-import { ContainerSlim } from '@components/Container'
+import { ContainerSlim } from '@components/skeleton/Container'
 import { Wrapper, Info } from './Footer.style'
 
 export const Footer = () => (

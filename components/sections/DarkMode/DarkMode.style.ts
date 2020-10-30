@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { H1 } from '@components/headings'
+import { H1 } from '@components/ui/headings'
 
 export const Images = styled.div`
   position: relative;

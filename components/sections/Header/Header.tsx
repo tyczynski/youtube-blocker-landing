@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react'
 import cx from 'classnames'
 import { ImageSet } from 'caravaggio-react'
-import { Button } from '@components/Button'
+import { Button } from '@components/ui/Button'
 import { Browser } from './Browser'
 import { Title } from './Title'
 import {

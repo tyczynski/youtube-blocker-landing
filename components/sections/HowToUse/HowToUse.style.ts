@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components'
-import { Container as BaseContainer } from '@components/Container'
+import { Container as BaseContainer } from '@components/skeleton/Container'
 
 export const Background = styled.div`
   background-color: var(--background-gray);

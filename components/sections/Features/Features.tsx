@@ -1,7 +1,7 @@
 import { MdLanguage, MdBlock } from 'react-icons/md'
 import { BsArrowUpDown } from 'react-icons/bs'
-import { ButtonPencil } from '@components/Button'
-import { H1 } from '@components/headings'
+import { ButtonPencil } from '@components/ui/Button'
+import { H1 } from '@components/ui/headings'
 import { Wrapper, SectionHeader, CardsGrid } from './Features.style'
 import { Card } from './Card'
 

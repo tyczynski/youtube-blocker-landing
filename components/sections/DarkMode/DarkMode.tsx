@@ -1,7 +1,7 @@
 import React from 'react'
 import { ImageSet } from 'caravaggio-react'
-import { Container } from '@components/Container'
-import { H1 } from '@components/headings'
+import { Container } from '@components/skeleton/Container'
+import { H1 } from '@components/ui/headings'
 import { Wrapper, Content, Images } from './DarkMode.style'
 import { getImageSets } from 'utils/getImageSets'
 
