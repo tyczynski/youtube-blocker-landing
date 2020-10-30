@@ -21,11 +21,14 @@ export const Content = styled.header`
 `
 
 export const Wrapper = styled(Container)`
+  margin-bottom: 8rem;
+
   @media screen and (min-width: 768px) {
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     grid-gap: 0 3.2rem;
     align-items: center;
+    margin-bottom: 11.2rem;
   }
 `
 
