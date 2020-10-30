@@ -13,6 +13,9 @@ export const GlobalStyles = createGlobalStyle`
     --neutral-06: hsl(0, 0%, 7.1%);
     --neutral-07: #f7f6f7;
 
+    --color-text-white: hsl(0, 0%, 100%);
+    --color-white: hsl(0, 0%, 100%);
+
     --text-black: hsl(0, 0%, 7%);
     --text-dark: hsl(0, 0%, 14%);
     --text-gray: hsl(210, 7%, 22%);
