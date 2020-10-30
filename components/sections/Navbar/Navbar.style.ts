@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle, css } from 'styled-components'
-import { Container as BaseContainer } from '@components/Container'
+import { Container as BaseContainer } from '@components/skeleton/Container'
 
 export const GlobalStyles = createGlobalStyle`
   :root {

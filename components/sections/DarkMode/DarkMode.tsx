@@ -1,9 +1,8 @@
 import React from 'react'
-import { ImageSet } from 'caravaggio-react'
-import { Container } from '@components/Container'
-import { H1 } from '@components/headings'
+import Image from 'next/image'
+import { Container } from '@components/skeleton/Container'
+import { H1 } from '@components/ui/headings'
 import { Wrapper, Content, Images } from './DarkMode.style'
-import { getImageSets } from 'utils/getImageSets'
 
 export const DarkMode: React.FC = () => {
   return (
@@ -16,8 +15,19 @@ export const DarkMode: React.FC = () => {
           </H1>
         </Content>
         <Images>
-          <ImageSet src="/images/dark-mode-01.png" sets={getImageSets(1024)} />
-          <ImageSet src="/images/dark-mode-02.png" sets={getImageSets(480)} />
+          <Image
+            src="/images/dark-mode-01.png"
+            loading="lazy"
+            width={1008}
+            height={724}
+          />
+
+          <Image
+            src="/images/dark-mode-02.png"
+            loading="lazy"
+            width={320}
+            height={496}
+          />
         </Images>
       </Container>
     </Wrapper>

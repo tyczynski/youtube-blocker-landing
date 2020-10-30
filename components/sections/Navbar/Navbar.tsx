@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { windowLoad } from '@utils/events'
+import { windowLoad } from '@lib/events'
 import { MenuLink } from './MenuLink'
 import {
   GlobalStyles,

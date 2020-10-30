@@ -1,6 +1,6 @@
 import styled, { css } from 'styled-components'
-import { H3 } from '@components/headings'
-import { Text } from '@components/Text'
+import { H3 } from '@components/ui/headings'
+import { Text } from '@components/ui/Text'
 import { StyledProps } from './types'
 
 const activeIconContainerCSS = css`

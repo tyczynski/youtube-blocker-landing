@@ -1,6 +1,6 @@
 import styled from 'styled-components'
-import { ContainerSlim } from '@components/Container'
-import { H1 } from '@components/headings'
+import { ContainerSlim } from '@components/skeleton/Container'
+import { H1 } from '@components/ui/headings'
 
 export const Wrapper = styled(ContainerSlim)`
   margin-bottom: 8rem;
