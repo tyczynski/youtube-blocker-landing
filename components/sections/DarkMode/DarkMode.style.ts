@@ -7,50 +7,50 @@ export const Images = styled.div`
   grid-column: 2 / 12;
   margin-bottom: -10px;
 
-  picture {
+  > div {
     display: block;
     border-radius: 0.8rem;
     overflow: hidden;
+    width: 100%;
 
+    /**
+     * Override next/image default styles
+     */
     &:first-child {
-      img {
-        display: none;
+      display: none;
 
-        @media screen and (min-width: 768px) {
-          display: block;
-          position: relative;
-          max-width: calc(100% - 5.4rem);
-          z-index: 10;
-        }
+      @media screen and (min-width: 768px) {
+        display: block;
+        position: relative;
+        max-width: calc(100% - 5.4rem) !important; /* 1 */
+        z-index: 10;
+      }
 
-        @media screen and (min-width: 992px) {
-          max-width: calc(100% - 15.2rem);
-          margin-bottom: -16.8rem;
-        }
+      @media screen and (min-width: 992px) {
+        max-width: calc(100% - 15.2rem) !important; /* 1 */
+        margin-bottom: -16.8rem;
       }
     }
 
     &:last-child {
-      img {
-        position: relative;
-        max-width: 32rem;
-        margin: 0 auto;
+      position: relative;
+      max-width: 32rem;
+      margin: 0 auto;
 
-        @media screen and (min-width: 768px) {
-          position: absolute;
-          top: 0;
-          right: 0;
-          transform: translateY(-14%);
-          z-index: 20;
-          box-shadow: 0 0.7px 2.2px rgba(0, 0, 0, 0.02),
-            0 1.6px 5.3px rgba(0, 0, 0, 0.028), 0 3px 10px rgba(0, 0, 0, 0.035),
-            0 5.4px 17.9px rgba(0, 0, 0, 0.042),
-            0 10px 33.4px rgba(0, 0, 0, 0.05), 0 24px 80px rgba(0, 0, 0, 0.07);
-        }
+      @media screen and (min-width: 768px) {
+        position: absolute;
+        top: 0;
+        right: 0;
+        transform: translateY(-14%);
+        z-index: 20;
+        box-shadow: 0 0.7px 2.2px rgba(0, 0, 0, 0.02),
+          0 1.6px 5.3px rgba(0, 0, 0, 0.028), 0 3px 10px rgba(0, 0, 0, 0.035),
+          0 5.4px 17.9px rgba(0, 0, 0, 0.042), 0 10px 33.4px rgba(0, 0, 0, 0.05),
+          0 24px 80px rgba(0, 0, 0, 0.07);
+      }
 
-        @media screen and (min-width: 992px) {
-          transform: translate(0, -32%);
-        }
+      @media screen and (min-width: 992px) {
+        transform: translate(0, -32%);
       }
     }
   }

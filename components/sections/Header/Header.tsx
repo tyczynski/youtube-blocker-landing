@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
+import Image from 'next/image'
 import cx from 'classnames'
-import { ImageSet } from 'caravaggio-react'
 import { Button } from '@components/ui/Button'
 import { Browser } from './Browser'
 import { Title } from './Title'
@@ -13,7 +13,6 @@ import {
   BrowsersText,
 } from './Header.style'
 import { windowLoad } from 'utils/events'
-import { getImageSets } from 'utils/getImageSets'
 
 export const Header: React.FC = () => {
   const [initialized, setInitialized] = useState(false)
@@ -58,17 +57,8 @@ export const Header: React.FC = () => {
         </BrowsersBlock>
       </Content>
       <Images>
-        <ImageSet
-          src="/images/intro-02.png"
-          loading="lazy"
-          sets={getImageSets(480)}
-        />
-
-        <ImageSet
-          src="/images/intro-01.png"
-          loading="lazy"
-          sets={getImageSets(380)}
-        />
+        <Image src="/images/intro-02.png" loading="lazy" unsized />
+        <Image src="/images/intro-01.png" loading="lazy" unsized />
       </Images>
     </Wrapper>
   )
