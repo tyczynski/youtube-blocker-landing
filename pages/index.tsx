@@ -3,6 +3,7 @@ import Head from 'next/head'
 import {
   Navbar,
   Header,
+  HowToUse,
   DarkMode,
   Features,
   Footer,
@@ -17,6 +18,7 @@ const HomePage: NextPage = () => (
     </Head>
     <Navbar />
     <Header />
+    <HowToUse />
     <DarkMode />
     <Features />
     <Footer />
