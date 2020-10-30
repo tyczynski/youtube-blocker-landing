@@ -23,7 +23,8 @@
       "@pages/*": ["pages/*"],
       "@components/*": ["components/*"],
       "@style/*": ["style/*"],
-      "@test/*": ["test/*"]
+      "@test/*": ["test/*"],
+      "@utils/*": ["utils/*"]
     }
   },
   "exclude": ["node_modules"],
