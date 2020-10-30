@@ -1,23 +1,46 @@
-import { Button } from '@components/Button'
+import { useEffect, useState } from 'react'
+import { windowLoad } from '@utils/events'
 import { MenuLink } from './MenuLink'
-import { Nav, Container, Logo, Menu, MenuItem } from './Navbar.style'
+import {
+  GlobalStyles,
+  Menu,
+  NavBase,
+  Nav,
+  Container,
+  Logo,
+} from './Navbar.style'
 
-export const Navbar: React.FC = () => (
-  <Nav>
-    <Container>
-      <Logo loading="lazy" src="/icons/logo.svg" alt="YouTube Blocker" />
+export const Navbar: React.FC = () => {
+  const [active, setActive] = useState(false)
 
-      <Menu>
-        <MenuItem>
-          <MenuLink href="#how-to-use">How to use</MenuLink>
-        </MenuItem>
-        <MenuItem>
-          <MenuLink href="#features">Features</MenuLink>
-        </MenuItem>
-        <MenuItem>
-          <Button $theme="ghost" text="Buy me a coffee" />
-        </MenuItem>
-      </Menu>
-    </Container>
-  </Nav>
-)
+  useEffect(() => {
+    const handleScroll = () => {
+      setActive(window.pageYOffset > 0)
+    }
+
+    window.addEventListener('scroll', handleScroll)
+    windowLoad(handleScroll)
+    return () => window.removeEventListener('scroll', handleScroll)
+  }, [])
+
+  return (
+    <NavBase $active={active}>
+      <GlobalStyles />
+
+      <Nav>
+        <Container>
+          <Logo loading="lazy" src="/icons/logo.svg" alt="YouTube Blocker" />
+
+          <Menu>
+            <li>
+              <MenuLink href="#how-to-use">How to use</MenuLink>
+            </li>
+            <li>
+              <MenuLink href="#features">Features</MenuLink>
+            </li>
+          </Menu>
+        </Container>
+      </Nav>
+    </NavBase>
+  )
+}

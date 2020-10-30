@@ -1,28 +1,16 @@
-import styled from 'styled-components'
-import { Container as CoreContainer } from '@components/Container'
+import styled, { createGlobalStyle, css } from 'styled-components'
+import { Container as BaseContainer } from '@components/Container'
 
-export const Nav = styled.nav`
-  position: sticky;
-  top: 0;
-  backdrop-filter: saturate(180%) blur(0.8rem);
-  background-color: rgba(255, 255, 255, 0.75);
-  margin: 0 0 9.6rem;
-  z-index: 100;
+export const GlobalStyles = createGlobalStyle`
+  :root {
+    --navbar-height: 8rem;
+
+    @media screen and (min-width: 768px) {
+      --navbar-height: 12rem;
+    }
+  }
 `
 
-export const Container = styled(CoreContainer)`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding-top: 3.2rem;
-  padding-bottom: 3.2rem;
-`
-
-export const Logo = styled.img`
-  display: block;
-  width: 14.2rem;
-  height: auto;
-`
 export const Menu = styled.ul`
   display: flex;
   align-items: center;
@@ -33,8 +21,53 @@ export const Menu = styled.ul`
   padding: 0;
 `
 
-export const MenuItem = styled.li`
-  &:last-child {
-    margin-left: 1.2rem;
+export const Nav = styled.nav`
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 100;
+  background-color: var(--color-white);
+  height: var(--navbar-height);
+  transition: box-shadow 0.24s ease;
+  transition-property: box-shadow, height;
+
+  @supports (backdrop-filter: saturate(180%) blur(0.8rem)) {
+    backdrop-filter: saturate(180%) blur(0.8rem);
+    background-color: hsla(0, 0%, 100%, 0.95);
   }
+`
+
+export const Container = styled(BaseContainer)`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: height 0.24s ease;
+  height: inherit;
+`
+
+export const Logo = styled.img`
+  display: block;
+  width: 14.2rem;
+  height: auto;
+`
+
+export const NavBase = styled.div<{ $active: boolean }>`
+  height: var(--navbar-height);
+  margin: 0 0 4.8rem;
+
+  @media screen and (min-width: 768px) {
+    margin: 0 0 9.6rem;
+  }
+
+  ${(props) =>
+    props.$active &&
+    css`
+      ${Nav} {
+        --navbar-height: 8rem;
+        box-shadow: 0 1.5px 3.6px rgba(0, 0, 0, 0.024),
+          0 4.1px 10px rgba(0, 0, 0, 0.035), 0 9.9px 24.1px rgba(0, 0, 0, 0.046),
+          0 33px 80px rgba(0, 0, 0, 0.07);
+      }
+    `}
 `
