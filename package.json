@@ -23,6 +23,22 @@
       "yarn format"
     ]
   },
+  "keywords": [
+    "react",
+    "typescript",
+    "nextjs",
+    "landing-page"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tyczynski/youtube-blocker-landing.git"
+  },
+  "author": "Przemysław Tyczyński <przemyslaw@tyczynski.pl>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tyczynski/youtube-blocker-landing/issues"
+  },
+  "homepage": "https://github.com/tyczynski/youtube-blocker-landing#readme",
   "dependencies": {
     "classnames": "^2.2.6",
     "next": "^10.0.0",
@@ -48,5 +64,4 @@
     "prettier": "^2.1.2",
     "typescript": "^4.0.3"
   },
-  "license": "MIT"
 }
