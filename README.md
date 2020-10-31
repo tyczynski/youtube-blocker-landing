@@ -40,3 +40,7 @@ Commit messages are written in the specification [conventional commits](https://
 - `perf` - a code change that improves performance
 - `chore` - the rest of the changes that don't match, like changes in prettier or eslint config
 - `release` - merge request with new release
+
+## License
+
+[MIT](LICENSE.md) © [Przemysław Tyczyński](https://tyczynski.dev)
