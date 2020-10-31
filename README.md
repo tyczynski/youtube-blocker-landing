@@ -1,5 +1,7 @@
 # Landing page of YouTube Blocker extension
 
+[YouTube Blocker extension repository](https://github.com/tyczynski/youtube-blocker)
+
 ## Getting Started
 
 Run the development server:
@@ -22,10 +24,6 @@ $ npm run build
 # Run the production version of the build
 $ npm run start
 ```
-
-## Semantic versioning
-
-The project uses _semantic versioning_. For more informations see the [documentaction](https://semver.org/).
 
 ### Conventional commits
 
