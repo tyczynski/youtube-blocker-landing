@@ -25,7 +25,7 @@ const Link = styled.a`
 export const Browser: React.FC<
   BrowserProps & React.AnchorHTMLAttributes<HTMLAnchorElement>
 > = ({ src, alt, ...props }) => (
-  <Link {...props} target="_blank" rel="noopener norefferer">
+  <Link {...props} target="_blank" rel="noopener noreferrer">
     <img src={src} alt={alt} loading="lazy" />
   </Link>
 )
