@@ -10,6 +10,13 @@ import {
   Logo,
 } from './Navbar.style'
 
+const sections = {
+  '#how-to-use': 'How to use',
+  '#features': 'Features',
+}
+
+type Section = keyof typeof sections
+
 export const Navbar: React.FC = () => {
   const [active, setActive] = useState(false)
 
@@ -23,6 +30,29 @@ export const Navbar: React.FC = () => {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
+  /**
+   * Smooth scroll to section
+   *
+   * @param event click mouse event
+   * @param hash section id
+   */
+  const scrollToSection = (
+    event: React.MouseEvent<HTMLLIElement, MouseEvent>,
+    hash: Section
+  ) => {
+    event.preventDefault()
+    const section = document.querySelector(hash)
+
+    if (section) {
+      const { top } = section.getBoundingClientRect()
+
+      window.scroll({
+        behavior: 'smooth',
+        top: window.pageYOffset + top,
+      })
+    }
+  }
+
   return (
     <NavBase $active={active}>
       <GlobalStyles />
@@ -32,12 +62,14 @@ export const Navbar: React.FC = () => {
           <Logo loading="lazy" src="/icons/logo.svg" alt="YouTube Blocker" />
 
           <Menu>
-            <li>
-              <MenuLink href="#how-to-use">How to use</MenuLink>
-            </li>
-            <li>
-              <MenuLink href="#features">Features</MenuLink>
-            </li>
+            {Object.keys(sections).map((key) => (
+              <li
+                onClick={(event) => scrollToSection(event, key as Section)}
+                key={key}
+              >
+                <MenuLink href={key}>{sections[key as Section]}</MenuLink>
+              </li>
+            ))}
           </Menu>
         </Container>
       </Nav>
